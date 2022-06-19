@@ -1,0 +1,12 @@
+I = imread('C:\Users\Marjan\Documents\MATLAB\AIR.jpg');
+m=rgb2gray(I);
+figure,imshow(I);title('original Image');
+figure,imshow(m);title('Converting RGB to grayscale');
+y = edge(m,'prewitt');
+figure,imshow(y);title('prewitt Filter');
+z = edge(m,'roberts');
+figure,imshow(z);title('roberts Filter');
+w = edge(m,'sobel');
+figure,imshow(w);title('sobel Filter');
+x = edge(m,'canny');
+figure,imshow(x);title('canny Filter');
